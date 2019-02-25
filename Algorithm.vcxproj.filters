@@ -1,14 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="examples">
-      <UniqueIdentifier>{96cccbb2-f5cc-42ad-8af7-1b9d33d75a0d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="struct">
       <UniqueIdentifier>{fd0259bf-280f-486a-8e0c-698b8e15f18b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="utility">
-      <UniqueIdentifier>{6076f549-5704-4e59-b0f2-54c52a473be9}</UniqueIdentifier>
     </Filter>
     <Filter Include="tests">
       <UniqueIdentifier>{96c8e941-612f-4e9f-8a0c-e505de8768ed}</UniqueIdentifier>
@@ -22,29 +16,29 @@
     <Filter Include="struct\graph">
       <UniqueIdentifier>{0e8475db-73f3-4c15-861a-329b3ad73d9c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="algorithm">
+      <UniqueIdentifier>{6e8f87e8-e041-4d8c-8a1d-295ccd6e9cb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="struct\utils">
+      <UniqueIdentifier>{bba9fc3c-77a1-4c9a-bc73-81a958dc1c1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm\examples">
+      <UniqueIdentifier>{a57345a1-a433-4739-9766-1d31a2213e05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm\sorting">
+      <UniqueIdentifier>{09dfeade-8ff7-44cc-8e6f-596c387d8744}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="examples\buf_size.cpp">
-      <Filter>examples</Filter>
+    <ClCompile Include="algorithm\examples\buf_size.cpp">
+      <Filter>algorithm\examples</Filter>
     </ClCompile>
-    <ClCompile Include="examples\city_temperature.cpp">
-      <Filter>examples</Filter>
+    <ClCompile Include="algorithm\examples\city_temperature.cpp">
+      <Filter>algorithm\examples</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="examples\city_temperature.h">
-      <Filter>examples</Filter>
-    </ClInclude>
-    <ClInclude Include="examples\buf_size.h">
-      <Filter>examples</Filter>
-    </ClInclude>
-    <ClInclude Include="utility\compare.h">
-      <Filter>utility</Filter>
-    </ClInclude>
-    <ClInclude Include="struct\memory_pool.h">
-      <Filter>struct</Filter>
-    </ClInclude>
     <ClInclude Include="tests\test_list.h">
       <Filter>tests</Filter>
     </ClInclude>
@@ -72,6 +66,36 @@
     </ClInclude>
     <ClInclude Include="struct\linear\deque.h">
       <Filter>struct\linear</Filter>
+    </ClInclude>
+    <ClInclude Include="struct\linear\vector.h">
+      <Filter>struct\linear</Filter>
+    </ClInclude>
+    <ClInclude Include="struct\tree\binary_tree.h">
+      <Filter>struct\tree</Filter>
+    </ClInclude>
+    <ClInclude Include="struct\tree\binary_search_tree.h">
+      <Filter>struct\tree</Filter>
+    </ClInclude>
+    <ClInclude Include="struct\utils\compare.h">
+      <Filter>struct\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="struct\utils\memory_pool.h">
+      <Filter>struct\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\test_binary_search_tree.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\examples\buf_size.h">
+      <Filter>algorithm\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\examples\city_temperature.h">
+      <Filter>algorithm\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\sorting\basic_sort.h">
+      <Filter>algorithm\sorting</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\sorting\sort_utils.h">
+      <Filter>algorithm\sorting</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

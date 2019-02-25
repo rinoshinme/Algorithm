@@ -120,25 +120,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="examples\buf_size.cpp" />
-    <ClCompile Include="examples\city_temperature.cpp" />
+    <ClCompile Include="algorithm\examples\buf_size.cpp" />
+    <ClCompile Include="algorithm\examples\city_temperature.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="examples\buf_size.h" />
-    <ClInclude Include="examples\city_temperature.h" />
+    <ClInclude Include="algorithm\examples\buf_size.h" />
+    <ClInclude Include="algorithm\examples\city_temperature.h" />
+    <ClInclude Include="algorithm\sorting\basic_sort.h" />
+    <ClInclude Include="algorithm\sorting\sort_utils.h" />
     <ClInclude Include="struct\linear\circular_list.h" />
     <ClInclude Include="struct\linear\deque.h" />
     <ClInclude Include="struct\linear\double_list.h" />
     <ClInclude Include="struct\linear\list.h" />
     <ClInclude Include="struct\linear\queue.h" />
     <ClInclude Include="struct\linear\stack.h" />
-    <ClInclude Include="struct\memory_pool.h" />
+    <ClInclude Include="struct\linear\vector.h" />
+    <ClInclude Include="struct\tree\binary_search_tree.h" />
+    <ClInclude Include="struct\tree\binary_tree.h" />
+    <ClInclude Include="struct\utils\compare.h" />
+    <ClInclude Include="struct\utils\memory_pool.h" />
     <ClInclude Include="tests.h" />
     <ClInclude Include="tests\tester.h" />
+    <ClInclude Include="tests\test_binary_search_tree.h" />
     <ClInclude Include="tests\test_double_list.h" />
     <ClInclude Include="tests\test_list.h" />
-    <ClInclude Include="utility\compare.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Readme.txt" />

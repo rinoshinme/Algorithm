@@ -10,11 +10,11 @@ namespace algo
 	{
 		BinaryNode<T>* left;
 		BinaryNode<T>* right;
-		T data;
+		T item;
 		BinaryNode() { left = NULL; right = NULL; }
 		BinaryNode(const T& data, BinaryNode<T>* l = NULL, BinaryNode<T>* r = NULL)
 		{
-			this->data = data;
+			this->item = data;
 			left = l;
 			right = r;
 		}
@@ -23,24 +23,29 @@ namespace algo
 	template<typename T>
 	class BinaryTree
 	{
+	protected:
 		BinaryNode<T>* root;
+
 	public:
 		BinaryTree();
-		void loadFromData();
-		void clearTree();
-		void traverseInorder();
-		void traversePreorder();
-		void traversePostorder();
+		virtual ~BinaryTree();
+		// void loadFromData();
+		virtual void clearTree() { if (root) _clearSubTree(root); }
+		virtual int height() const { return _heightOfSubTree(root); } // recursive implementation
+		// int depth(BinaryNode<T>* node); // depth of a node.
 
-		int height(); // recursive implementation
+		virtual void traverseInorder() const { _traverseInorderSubTree(root); }
+		virtual void traversePreorder() const { _traversePreorderSubTree(root); }
+		virtual void traversePostorder() const { _traversePostorderSubTree(root); }
 
 	private:
 		// recursive methods.
-		void clearSubTree(BinaryNode<T>* node);
-		int heightOfSubTree(BinaryNode<T>* node);
-		void traverseInorderSubTree(BinaryNode<T>* node);
-		void traversePreorderSubTree(BinaryNode<T>* node);
-		void traversePostorderSubTree(BinaryNode<T>* node);
+		void _clearSubTree(BinaryNode<T>* node);
+		int _heightOfSubTree(const BinaryNode<T>* node) const;
+
+		void _traverseInorderSubTree(const BinaryNode<T>* node) const;
+		void _traversePreorderSubTree(const BinaryNode<T>* node) const;
+		void _traversePostorderSubTree(const BinaryNode<T>* node) const;
 	};
 
 	template<typename T>
@@ -50,13 +55,65 @@ namespace algo
 	}
 
 	template<typename T>
-	void BinaryTree<T>::clearTree()
+	BinaryTree<T>::~BinaryTree()
 	{
-		if (root != NULL)
-			clearSubTree(root);
+		clearTree();
 	}
 
+	template<typename T>
+	int BinaryTree<T>::_heightOfSubTree(const BinaryNode<T>* node) const
+	{
+		if (node == NULL)
+			return 0;
+		int h_left = _heightOfSubTree(node->left);
+		int h_right = _heightOfSubTree(node->right);
+		return (h_left > h_right) ? h_left : h_right;
+	}
 
+	template<typename T>
+	void BinaryTree<T>::_traverseInorderSubTree(const BinaryNode<T>* node) const
+	{
+		if (node == NULL)
+			return;
+		_traverseInorderSubTree(node->left);
+		std::cout << node->item << std::endl;
+		_traverseInorderSubTree(node->right);
+	}
+
+	template<typename T>
+	void BinaryTree<T>::_traversePreorderSubTree(const BinaryNode<T>* node) const
+	{
+		if (node == NULL)
+			return;
+		std::cout << node->item << std::endl;
+		_traverseInorderSubTree(node->left);
+		_traverseInorderSubTree(node->right);
+	}
+
+	template<typename T>
+	void BinaryTree<T>::_traversePostorderSubTree(const BinaryNode<T>* node) const
+	{
+		if (node == NULL)
+			return;
+		_traverseInorderSubTree(node->left);
+		_traverseInorderSubTree(node->right);
+		std::cout << node->item << std::endl;
+	}
+
+	template<typename T>
+	void BinaryTree<T>::_clearSubTree(BinaryNode<T>* node)
+	{
+		if (node == NULL)
+			return;
+
+		if (node->left)
+			_clearSubTree(node->left);
+		if (node->right)
+			_clearSubTree(node->right);
+
+		delete node;
+		node = NULL;
+	}
 }
 
 #endif
