@@ -9,7 +9,7 @@ namespace algo
 	class BasicSort : public SortUtils<T>
 	{
 	public:
-		virtual void sort(T* array, int size) const {}
+		virtual void sort(T* array, int size) {}
 		void selectionSort(T* array, int size);
 		void insertionSort(T* array, int size);
 		void bubbleSort(T* array, int size) {}

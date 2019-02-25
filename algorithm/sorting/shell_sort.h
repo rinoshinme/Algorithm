@@ -9,7 +9,7 @@ namespace algo
 	class ShellSort : public SortUtils<T>
 	{
 	public:
-		virtual void sort(T* array, int size) const
+		virtual void sort(T* array, int size)
 		{
 			int h = 1;
 			while (h < size / 3)

@@ -28,6 +28,9 @@
     <Filter Include="algorithm\sorting">
       <UniqueIdentifier>{09dfeade-8ff7-44cc-8e6f-596c387d8744}</UniqueIdentifier>
     </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{326ab74b-51d7-474c-86fe-4dab2bf2a933}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -104,6 +107,18 @@
     </ClInclude>
     <ClInclude Include="algorithm\sorting\merge_sort.h">
       <Filter>algorithm\sorting</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\sorting\quick_sort.h">
+      <Filter>algorithm\sorting</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\random.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\sorting\priority_queue.h">
+      <Filter>algorithm\sorting</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\defines.h">
+      <Filter>utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

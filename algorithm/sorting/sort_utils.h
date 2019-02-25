@@ -13,22 +13,13 @@ namespace algo
 	class SortUtils
 	{
 	public:
-		virtual void sort(T* array, int size) const = 0;
+		SortUtils() {}
+		virtual ~SortUtils() {}
+		virtual void sort(T* array, int size) = 0;
 
-		void exch(T* a, int i, int j) const
-		{
-			T temp = a[i];
-			a[i] = a[j];
-			a[j] = temp;
-		}
-
-		virtual bool less(const T& v, const T& w) const
-		{
-			return (v < w);
-		}
-
+	public:
 		// can be overrided for special value type
-		virtual int compare(const T& v, const T& w) const
+		virtual int compare(const T& v, const T& w)
 		{
 			if (v < w)
 				return -1;
@@ -38,7 +29,7 @@ namespace algo
 				return 1;
 		}
 
-		bool isSorted(const T* array, int size) const
+		bool isSorted(const T* array, int size)
 		{
 			if (size == 0 || size == 1)
 				return true;
@@ -50,7 +41,7 @@ namespace algo
 			return true;
 		}
 
-		void show(const T* array, int size, char sep = '\n') const
+		void show(const T* array, int size, char sep = '\n')
 		{
 			for (int i = 0; i < size; ++i)
 				std::cout << array[i] << sep;
@@ -64,6 +55,20 @@ namespace algo
 			clock_t end = clock();
 			return (end - begin) * 1.0 / CLOCKS_PER_SEC;
 		}
+
+	protected:
+		void exch(T* a, int i, int j)
+		{
+			T temp = a[i];
+			a[i] = a[j];
+			a[j] = temp;
+		}
+
+		virtual bool less(const T& v, const T& w)
+		{
+			return (v < w);
+		}
+
 	};
 }
 

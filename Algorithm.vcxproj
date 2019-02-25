@@ -129,6 +129,8 @@
     <ClInclude Include="algorithm\examples\city_temperature.h" />
     <ClInclude Include="algorithm\sorting\basic_sort.h" />
     <ClInclude Include="algorithm\sorting\merge_sort.h" />
+    <ClInclude Include="algorithm\sorting\priority_queue.h" />
+    <ClInclude Include="algorithm\sorting\quick_sort.h" />
     <ClInclude Include="algorithm\sorting\shell_sort.h" />
     <ClInclude Include="algorithm\sorting\sort_utils.h" />
     <ClInclude Include="struct\linear\circular_list.h" />
@@ -147,6 +149,8 @@
     <ClInclude Include="tests\test_double_list.h" />
     <ClInclude Include="tests\test_list.h" />
     <ClInclude Include="tests\test_sort.h" />
+    <ClInclude Include="utils\defines.h" />
+    <ClInclude Include="utils\random.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Readme.txt" />
