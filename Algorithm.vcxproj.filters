@@ -45,7 +45,6 @@
     <ClInclude Include="tests\tester.h">
       <Filter>tests</Filter>
     </ClInclude>
-    <ClInclude Include="tests.h" />
     <ClInclude Include="tests\test_double_list.h">
       <Filter>tests</Filter>
     </ClInclude>
@@ -95,6 +94,15 @@
       <Filter>algorithm\sorting</Filter>
     </ClInclude>
     <ClInclude Include="algorithm\sorting\sort_utils.h">
+      <Filter>algorithm\sorting</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\sorting\shell_sort.h">
+      <Filter>algorithm\sorting</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\test_sort.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\sorting\merge_sort.h">
       <Filter>algorithm\sorting</Filter>
     </ClInclude>
   </ItemGroup>

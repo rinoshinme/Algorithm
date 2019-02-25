@@ -128,6 +128,8 @@
     <ClInclude Include="algorithm\examples\buf_size.h" />
     <ClInclude Include="algorithm\examples\city_temperature.h" />
     <ClInclude Include="algorithm\sorting\basic_sort.h" />
+    <ClInclude Include="algorithm\sorting\merge_sort.h" />
+    <ClInclude Include="algorithm\sorting\shell_sort.h" />
     <ClInclude Include="algorithm\sorting\sort_utils.h" />
     <ClInclude Include="struct\linear\circular_list.h" />
     <ClInclude Include="struct\linear\deque.h" />
@@ -140,11 +142,11 @@
     <ClInclude Include="struct\tree\binary_tree.h" />
     <ClInclude Include="struct\utils\compare.h" />
     <ClInclude Include="struct\utils\memory_pool.h" />
-    <ClInclude Include="tests.h" />
     <ClInclude Include="tests\tester.h" />
     <ClInclude Include="tests\test_binary_search_tree.h" />
     <ClInclude Include="tests\test_double_list.h" />
     <ClInclude Include="tests\test_list.h" />
+    <ClInclude Include="tests\test_sort.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Readme.txt" />
