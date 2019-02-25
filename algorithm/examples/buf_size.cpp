@@ -10,25 +10,25 @@ long copyFile(const std::string& infilename, const std::string& outfilename, siz
 
 	if ((infile = fopen(infilename.c_str(), "rb")) == NULL)
 	{
-		printf("Cannot open %s\n", infilename);
+		printf("Cannot open %s\n", infilename.c_str());
 		exit(1);
 	}
 
 	if (setvbuf(infile, NULL, _IOFBF, insize))
 	{
-		printf("Could not set infile buffer to %u bytes.\n", insize);
+		printf("Could not set infile buffer to %d bytes.\n", int(insize));
 		exit(1);
 	}
 
 	if ((outfile = fopen(outfilename.c_str(), "wb")) == NULL)
 	{
-		printf("Cannot open %s\n", outfilename);
+		printf("Cannot open %s\n", outfilename.c_str());
 		exit(1);
 	}
 
 	if (setvbuf(outfile, NULL, _IOFBF, outsize))
 	{
-		printf("Could not set outfile buffer to %u bytes.\n", outsize);
+		printf("Could not set outfile buffer to %d bytes.\n", int(outsize));
 		exit(1);
 	}
 
@@ -52,7 +52,7 @@ void testCopyFile()
 	
 	for (int k = 0; k < nbuf; ++k)
 	{
-		printf("testing buffer size = %d\n", bufsizes[k]);
+		printf("testing buffer size = %d\n", int(bufsizes[k]));
 		long total, average, lo, hi, elapsed;
 		total = hi = 0;
 		lo = LONG_MAX;

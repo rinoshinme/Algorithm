@@ -1,18 +1,26 @@
-#include <iostream>
-#include "tests/test_list.h"
-#include "tests/test_double_list.h"
-#include "tests/test_binary_search_tree.h"
-#include "tests/test_sort.h"
+#include "algorithm/examples/max_sub_array.h"
+#include "algorithm/examples/string_shift.h"
+#include "algorithm/examples/string_permutation.h"
+#include "algorithm/examples/string_dp.h"
 
+#include <iostream>
 using namespace algo;
 
-int main()
-{
-	// test_list();
-	// test_double_list();
-	// test_binary_search_tree();
-	test_sort();
-
-	std::cout << "finished...\n";
-	std::getchar();
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    std::cout << "Hello, World!\n";
+    
+    std::string s1("caoffe");
+    std::string s2("coffee");
+    StringDP sdp;
+    std::string result;
+    int d = sdp.lcs1(s1, s2, result);
+    std::cout << "-" << result << "-" << std::endl;
+    
+    // sdp.showValues(s1.size(), s2.size());
+    std::cout << d << std::endl;
+    
+    // printf("%s\n", input);
+    
+    return 0;
 }

@@ -10,7 +10,7 @@ int AddNodeAscend(Link to_add)
 {
 	Link pn, prev, curr;
 	struct Node dummy;
-	int i;
+	int i = 0;
 
 	pn = (Link)malloc(sizeof(struct Node));
 	if (pn == NULL)
@@ -52,11 +52,11 @@ int DeleteNode(Link to_delete)
 {
 	Link curr = NULL;
 	Link prev = NULL;
-	int i;
+	int i = 0;
 	if (head == NULL)
 		return 0;
 
-	for (prev == NULL, curr = head;
+	for (prev = NULL, curr = head;
 		curr != NULL && (i = NodeCmp(to_delete, curr)) > 0;
 		prev = curr, curr = curr->next)
 		;
@@ -136,7 +136,11 @@ void testCityTemp(const std::string& input_file)
 
 		// get rid of carriage return
 		buffer[strlen(buffer) - 1] = '\0';
+#ifdef WIN32
 		n.city = _strdup(buffer + 3);
+#else
+        n.city = strdup(buffer + 3);
+#endif
 		buffer[3] = '\0';
 		n.temp = atoi(buffer);
 		if (AddNodeAscend(&n) == 0)
