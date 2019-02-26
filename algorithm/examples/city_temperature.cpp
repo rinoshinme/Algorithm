@@ -136,7 +136,7 @@ void testCityTemp(const std::string& input_file)
 
 		// get rid of carriage return
 		buffer[strlen(buffer) - 1] = '\0';
-#ifdef WIN32
+#ifdef _WIN32
 		n.city = _strdup(buffer + 3);
 #else
         n.city = strdup(buffer + 3);

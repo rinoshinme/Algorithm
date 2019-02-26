@@ -2,6 +2,7 @@
 #include "algorithm/examples/string_shift.h"
 #include "algorithm/examples/string_permutation.h"
 #include "algorithm/examples/string_dp.h"
+#include "utils/image_utils.h"
 
 #include <iostream>
 using namespace algo;
@@ -21,6 +22,10 @@ int main(int argc, const char * argv[]) {
     std::cout << d << std::endl;
     
     // printf("%s\n", input);
-    
+	
+#ifdef _WIN32
+	std::cout << "finished...\n";
+	std::getchar();
+#endif
     return 0;
 }

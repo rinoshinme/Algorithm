@@ -122,12 +122,25 @@
   <ItemGroup>
     <ClCompile Include="algorithm\examples\buf_size.cpp" />
     <ClCompile Include="algorithm\examples\city_temperature.cpp" />
+    <ClCompile Include="algorithm\examples\max_sub_array.cpp" />
+    <ClCompile Include="algorithm\examples\string_dp.cpp" />
+    <ClCompile Include="algorithm\examples\string_permutation.cpp" />
+    <ClCompile Include="algorithm\examples\string_shift.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="utils\image_utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm\examples\buf_size.h" />
     <ClInclude Include="algorithm\examples\city_temperature.h" />
+    <ClInclude Include="algorithm\examples\kmp.h" />
+    <ClInclude Include="algorithm\examples\max_sub_array.h" />
+    <ClInclude Include="algorithm\examples\string_dp.h" />
+    <ClInclude Include="algorithm\examples\string_permutation.h" />
+    <ClInclude Include="algorithm\examples\string_shift.h" />
+    <ClInclude Include="algorithm\searching\bst.h" />
+    <ClInclude Include="algorithm\searching\symbol_table.h" />
     <ClInclude Include="algorithm\sorting\basic_sort.h" />
+    <ClInclude Include="algorithm\sorting\heap_sort.h" />
     <ClInclude Include="algorithm\sorting\merge_sort.h" />
     <ClInclude Include="algorithm\sorting\priority_queue.h" />
     <ClInclude Include="algorithm\sorting\quick_sort.h" />
@@ -149,7 +162,9 @@
     <ClInclude Include="tests\test_double_list.h" />
     <ClInclude Include="tests\test_list.h" />
     <ClInclude Include="tests\test_sort.h" />
+    <ClInclude Include="utils\image_utils.h" />
     <ClInclude Include="utils\defines.h" />
+    <ClInclude Include="utils\minmax.h" />
     <ClInclude Include="utils\random.h" />
   </ItemGroup>
   <ItemGroup>

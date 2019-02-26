@@ -31,6 +31,9 @@
     <Filter Include="utils">
       <UniqueIdentifier>{326ab74b-51d7-474c-86fe-4dab2bf2a933}</UniqueIdentifier>
     </Filter>
+    <Filter Include="algorithm\searching">
+      <UniqueIdentifier>{d1a66645-0641-464d-b467-442735d89bf7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -39,6 +42,21 @@
     </ClCompile>
     <ClCompile Include="algorithm\examples\city_temperature.cpp">
       <Filter>algorithm\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithm\examples\max_sub_array.cpp">
+      <Filter>algorithm\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithm\examples\string_dp.cpp">
+      <Filter>algorithm\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithm\examples\string_permutation.cpp">
+      <Filter>algorithm\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithm\examples\string_shift.cpp">
+      <Filter>algorithm\examples</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\image_utils.cpp">
+      <Filter>utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +137,36 @@
     </ClInclude>
     <ClInclude Include="utils\defines.h">
       <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\examples\kmp.h">
+      <Filter>algorithm\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\examples\max_sub_array.h">
+      <Filter>algorithm\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\examples\string_dp.h">
+      <Filter>algorithm\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\examples\string_permutation.h">
+      <Filter>algorithm\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\examples\string_shift.h">
+      <Filter>algorithm\examples</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\minmax.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\image_utils.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\sorting\heap_sort.h">
+      <Filter>algorithm\sorting</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\searching\symbol_table.h">
+      <Filter>algorithm\searching</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm\searching\bst.h">
+      <Filter>algorithm\searching</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

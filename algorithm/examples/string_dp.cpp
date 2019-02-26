@@ -1,6 +1,7 @@
 #include "string_dp.h"
 #include "../../utils/minmax.h"
 #include <iostream>
+#include <algorithm>
 
 namespace algo
 {

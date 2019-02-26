@@ -20,15 +20,35 @@ namespace algo
 		int size() { return N; }
 
 	private:
-		bool less(int i, int j);
-		void exch(int i, int j);
-		void swim(int k);
-		void sink(int k);
+		bool less(int i, int j) { return pq[i] < pq[j]; }
+		void exch(int i, int j) { T temp = pq[i]; pq[i] = pq[j]; pq[j] = temp; }
+		void swim(int k)
+		{
+			while (k > 1 && less(k / 2, k))
+			{
+				exch(k / 2, k);
+				k = k / 2;
+			}
+		}
+
+		void sink(int k)
+		{
+			while (2 * k <= N)
+			{
+				int j = 2 * k;
+				if (j < N && less(j, j + 1))
+					++j;
+				if (!less(k, j))
+					break;
+				k = j;
+			}
+		}
 	};
 
 	template<typename T>
 	MaxPQ<T>::MaxPQ(int max_size)
 	{
+		// only [1, max_size] position has elements
 		pq = new T[max_size + 1];
 		this->max_size = max_size;
 		N = 0;
@@ -51,7 +71,6 @@ namespace algo
 		sink(1);
 		return max_value;
 	}
-
 }
 
 #endif
